@@ -22,7 +22,7 @@ int main(int argn, char *args[])
 	check_args_num(argn);
 	fd = open_file(filename);
 
-	while (( readed = getline(&buff, &line_len, fd)) != -1)
+	while ((readed = getline(&buff, &line_len, fd)) != -1)
 	{
 		op_code = strtok(buff, "\t\n ");
 		if (op_code)
@@ -33,7 +33,7 @@ int main(int argn, char *args[])
 				continue;
 			}
 
-			op_param =strtok(NULL, "\t\n ");
+			op_param = strtok(NULL, "\t\n ");
 			op_status = handle_execution(op_code, op_param, line_num, op_status);
 
 			if (op_status >= 100 && op_status < 300)
