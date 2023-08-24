@@ -29,6 +29,7 @@
 #define ERR_PCH_USG		211
 #define ERR_PCH_EMP		212
 #define _XOPEN_SOURCE	700
+
 #include <ctype.h>
 #include <fcntl.h>
 #include <stdlib.h>
